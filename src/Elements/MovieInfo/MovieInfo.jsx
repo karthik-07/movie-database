@@ -1,7 +1,7 @@
-import React from "react";
 import { IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from "../../config";
 import FontAwesome from "react-fontawesome";
-import MovieThumb from "../MovieThumb/MovieThumb";
+import MovieThumb from "../MovieThumb/MovieThumb.jsx";
+import PropTypes from 'prop-types';
 import "./MovieInfo.css";
 
 const MovieInfo = (props) => {
@@ -54,6 +54,17 @@ const MovieInfo = (props) => {
       </div>
     </div>
   );
+};
+
+MovieInfo.propTypes = {
+  movie: PropTypes.shape({
+    title: PropTypes.string,
+    overview: PropTypes.string,
+    backdrop_path: PropTypes.string,
+    poster_path: PropTypes.string,
+    vote_average: PropTypes.number,
+  }).isRequired,
+  directors: PropTypes.array.isRequired,
 };
 
 export default MovieInfo;

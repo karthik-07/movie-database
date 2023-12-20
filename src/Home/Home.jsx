@@ -6,12 +6,12 @@ import {
   BACKDROP_SIZE,
   POSTER_SIZE,
 } from "../config";
-import HeroImage from "../elements/HeroImage/HeroImage";
+import HeroImage from "../Elements/HeroImage/HeroImage";
 import SearchBar from "../Elements/SearchBar/SearchBar";
 import FourColGrid from "../Elements/FourColGrid/FourColGrid";
-import MovieThumb from "../elements/MovieThumb/MovieThumb";
-import LoadMoreBtn from "../elements/LoadMoreBtn/LoadMoreBtn";
-import Spinner from "../elements/Spinner/Spinner";
+import MovieThumb from "../Elements/MovieThumb/MovieThumb";
+import LoadMoreBtn from "../Elements/LoadMoreBtn/LoadMoreBtn";
+import Spinner from "../Elements/Spinner/Spinner";
 import "./Home.css";
 
 const Home = () => {

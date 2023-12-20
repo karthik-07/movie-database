@@ -3,10 +3,11 @@ import { useParams } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { API_URL, API_KEY } from "../config";
 import MovieInfo from "../Elements/MovieInfo/MovieInfo";
+import Navigation from "../elements/Navigation/Navigation";
 import MovieInfoBar from "../Elements/MovieInfoBar/MovieInfoBar";
 import FourColGrid from "../Elements/FourColGrid/FourColGrid";
 import Actor from "../Elements/Actors/Actor";
-import Spinner from "../elements/Spinner/Spinner";
+import Spinner from "../Elements/Spinner/Spinner";
 import "./Movie.css";
 
 
@@ -45,6 +46,7 @@ const Movie = () => {
     <div className="rmdb-movie">
       {movie ? (
         <div>
+          <Navigation movie={movie ? movie.title: ""} />
           <MovieInfo movie={movie} directors={directors} />
           <MovieInfoBar time={movie.runtime} budget={movie.budget} revenue={movie.revenue} />
         </div>
