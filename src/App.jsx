@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Header from "../src/Elements/Header/Header"
 import Home from "../src/Home/Home";
 import Movie from "../src/Movie/Movie";
@@ -7,7 +7,7 @@ import NotFound from "../src/Elements/NotFound/NotFound";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <React.Fragment>
         <Header />
         <Routes>
@@ -16,7 +16,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </React.Fragment>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
